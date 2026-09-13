@@ -1,8 +1,4 @@
-// ===================================================================
-// THE CRAVE STUDIO — SPA behaviour
-// ===================================================================
-
-const WHATSAPP_NUMBER = '923217570734'; // +92 321 7570734
+const WHATSAPP_NUMBER = '923217570734';
 
 function buildWhatsAppUrl(itemName) {
   const base = `Hi! I'd like to order from The Crave Studio`;
@@ -12,7 +8,6 @@ function buildWhatsAppUrl(itemName) {
 
 document.addEventListener('DOMContentLoaded', () => {
 
-  // ---- Wire up generic WhatsApp CTA buttons ----
   document.querySelectorAll('#navWhatsapp, #heroWhatsapp, #orderWhatsapp').forEach(el => {
     el.href = buildWhatsAppUrl();
   });
@@ -27,7 +22,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // ---- Navbar scroll state ----
   const navbar = document.getElementById('navbar');
   const onScroll = () => {
     navbar.classList.toggle('scrolled', window.scrollY > 40);
@@ -35,7 +29,6 @@ document.addEventListener('DOMContentLoaded', () => {
   onScroll();
   window.addEventListener('scroll', onScroll, { passive: true });
 
-  // ---- Mobile menu ----
   const hamburger = document.getElementById('hamburger');
   const navLinks = document.getElementById('navLinks');
   hamburger.addEventListener('click', () => {
@@ -51,7 +44,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // ---- Active nav link on scroll ----
   const sections = document.querySelectorAll('section[id]');
   const navAnchors = document.querySelectorAll('[data-nav]');
   const sectionObserver = new IntersectionObserver((entries) => {
@@ -66,7 +58,6 @@ document.addEventListener('DOMContentLoaded', () => {
   }, { rootMargin: '-45% 0px -50% 0px', threshold: 0 });
   sections.forEach(s => sectionObserver.observe(s));
 
-  // ---- Scroll reveal ----
   const revealEls = document.querySelectorAll('.reveal');
   const revealObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -78,7 +69,6 @@ document.addEventListener('DOMContentLoaded', () => {
   }, { threshold: 0.15 });
   revealEls.forEach(el => revealObserver.observe(el));
 
-  // ---- Menu category filter ----
   const filterBtns = document.querySelectorAll('.filter-btn');
   const menuCards = document.querySelectorAll('.menu-card');
   filterBtns.forEach(btn => {
@@ -93,7 +83,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // ---- Gallery lightbox ----
   const lightbox = document.getElementById('lightbox');
   const lightboxImg = document.getElementById('lightboxImg');
   const lightboxClose = document.getElementById('lightboxClose');
@@ -121,7 +110,6 @@ document.addEventListener('DOMContentLoaded', () => {
     if (e.key === 'Escape') closeLightbox();
   });
 
-  // ---- Footer year ----
   const yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 

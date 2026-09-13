@@ -1,8 +1,3 @@
-/* ===================================================================
-   THE CRAVE STUDIO — Stylesheet
-   Palette: warm cream + deep chocolate brown + blush pink + gold
-=================================================================== */
-
 :root {
   --cream: #FFF8F2;
   --cream-alt: #FDEFE3;
@@ -73,7 +68,6 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 .eyebrow-light { color: var(--pink-400); }
 
-/* subtle grain/texture overlay for warmth */
 .grain-overlay {
   position: fixed;
   inset: 0;
@@ -85,7 +79,6 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   background-size: 3px 3px;
 }
 
-/* ===================== BUTTONS ===================== */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -125,7 +118,6 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 .btn-order:hover { background: var(--pink-400); color: #fff; }
 
-/* ===================== NAVBAR ===================== */
 .navbar {
   position: fixed;
   top: 0; left: 0; right: 0;
@@ -226,7 +218,6 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .hamburger.is-open span:nth-child(3) { transform: translateY(-7.5px) rotate(-45deg); }
 .hamburger.is-open span { background: var(--brown-900) !important; }
 
-/* ===================== HERO ===================== */
 .hero {
   position: relative;
   min-height: 100vh;
@@ -321,7 +312,6 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   100% { opacity: 0; top: 20px; }
 }
 
-/* ===================== ABOUT ===================== */
 .about { padding: 110px 0; background: var(--cream); }
 .about-grid {
   display: grid;
@@ -356,12 +346,10 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .stat-card h3 { font-size: 1.02rem; margin-bottom: .35em; }
 .stat-card p { font-size: .86rem; margin: 0; }
 
-/* ===================== SECTION HEAD ===================== */
 .section-head { text-align: center; max-width: 640px; margin: 0 auto 50px; }
 .section-head h2 { font-size: clamp(1.9rem, 3.6vw, 2.6rem); }
 .section-lead { font-size: 1rem; }
 
-/* ===================== MENU ===================== */
 .menu { padding: 110px 0; background: var(--cream-alt); position: relative; }
 .menu-filters {
   display: flex;
@@ -423,7 +411,6 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 
 .menu-footnote { text-align: center; margin-top: 40px; font-size: .9rem; color: var(--brown-600); }
 
-/* ===================== SPLIT SECTIONS (Sweets / Frozen) ===================== */
 .split-section { padding: 100px 0; }
 .sweets { background: var(--cream); }
 .frozen { background: var(--cream-alt); }
@@ -445,7 +432,6 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .split-copy h2 { font-size: clamp(1.7rem, 3.2vw, 2.3rem); }
 .split-copy p { font-size: 1rem; }
 
-/* ===================== GALLERY ===================== */
 .gallery { padding: 110px 0; background: var(--cream); }
 .gallery-grid {
   display: grid;
@@ -476,7 +462,6 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .gallery-item:hover .gallery-zoom-icon { opacity: 1; transform: translate(-50%, -50%) scale(1); }
 .gallery-item:hover img { transform: scale(1.1); }
 
-/* ===================== REVIEWS MARQUEE ===================== */
 .reviews { padding: 110px 0 120px; background: var(--cream-alt); overflow: hidden; }
 .reviews .section-head { margin-bottom: 56px; }
 
@@ -529,7 +514,6 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   .marquee-track { animation-duration: 26s; }
 }
 
-/* ===================== ORDER / CONTACT ===================== */
 .order-cta {
   padding: 110px 0;
   background: radial-gradient(circle at top left, #4A2E20, var(--brown-900) 65%);
@@ -580,7 +564,6 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .info-list a { color: var(--pink-400); }
 .info-list a:hover { text-decoration: underline; }
 
-/* ===================== FOOTER ===================== */
 .site-footer { background: var(--brown-900); color: rgba(255,255,255,.7); padding: 64px 0 0; }
 .footer-grid {
   display: grid;
@@ -603,7 +586,6 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   color: rgba(255,255,255,.45);
 }
 
-/* ===================== LIGHTBOX ===================== */
 .lightbox {
   position: fixed; inset: 0;
   background: rgba(20, 12, 8, .92);
@@ -630,7 +612,6 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 .lightbox-close:hover { opacity: 1; }
 
-/* ===================== SCROLL REVEAL ===================== */
 .reveal {
   opacity: 0;
   transform: translateY(28px);
@@ -638,7 +619,6 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 .reveal.in-view { opacity: 1; transform: translateY(0); }
 
-/* ===================== RESPONSIVE ===================== */
 @media (max-width: 980px) {
   .about-grid, .split-grid, .order-grid { grid-template-columns: 1fr; }
   .split-grid.reverse .split-media,
